@@ -1,0 +1,30 @@
+{
+  "price": 1.0,
+  "number": 10,
+  "gatekeeper": null,
+  "creators": [
+    {
+      "address": "HK2TbkRvLJxU9uJP4MVTLp29Sm151xpcfkKMvhDQfZBW",
+      "share": 100
+    }
+  ],
+  "solTreasuryAccount": "HK2TbkRvLJxU9uJP4MVTLp29Sm151xpcfkKMvhDQfZBW",
+  "splTokenAccount": null,
+  "splToken": null,
+  "goLiveDate": "2022-09-06T19:41:28.940040400+00:00",
+  "endSettings": null,
+  "whitelistMintSettings": null,
+  "hiddenSettings": {
+    "name": "The Bear Market Rally Ticket ",
+    "uri": "https://arweave.net/vWJvuNrYmlXQhpL75c2ZyNo_HsjLS0g-ca2jbwc3_8E",
+    "hash": "gGkuHBw7HzpoXXTujRqzYjDJSszK9Tka"
+  },
+  "uploadMethod": "bundlr",
+  "retainAuthority": true,
+  "isMutable": true,
+  "symbol": "BMR",
+  "sellerFeeBasisPoints": 100,
+  "awsConfig": null,
+  "nftStorageAuthToken": null,
+  "shdwStorageAccount": null
+}

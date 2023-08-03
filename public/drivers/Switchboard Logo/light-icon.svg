@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="206px" height="210px" viewBox="0 0 206 210" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group-3@3x</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="131.907856" height="132" rx="21.504"></rect>
+        <filter x="-44.6%" y="-40.0%" width="189.2%" height="192.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="2.8" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="6" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="16" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.03 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMorphology radius="1.8" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter2"></feMorphology>
+            <feOffset dx="0" dy="18" in="shadowSpreadOuter2" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter2" in2="SourceAlpha" operator="out" result="shadowBlurOuter2"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMorphology radius="2.8" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter3"></feMorphology>
+            <feOffset dx="0" dy="6" in="shadowSpreadOuter3" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter3" in2="SourceAlpha" operator="out" result="shadowBlurOuter3"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.338350158   0 0 0 0 0.338350158   0 0 0 0 0.338350158  0 0 0 0.03 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="logos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-5" transform="translate(37.046072, 31.000000)">
+            <g id="Rectangle-Copy-2">
+                <g id="path-1-link" fill="#000000" fill-rule="nonzero">
+                    <rect id="path-1" x="0" y="0" width="131.907856" height="132" rx="21.504"></rect>
+                </g>
+                <g id="path-1">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use stroke="#FFFFFF" stroke-width="1.6" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+            <g id="Group-2" transform="translate(22.972724, 34.818509)">
+                <g id="Group-2-Copy" fill="#000000" fill-rule="nonzero">
+                    <g id="Group-9">
+                        <path d="M8.72971837,22.8465213 C8.72971837,9.30828427 18.2065481,0.2607914 32.817063,0 L85.9624092,0 C82.7925014,6.93683611 80.2407119,10.4539827 78.3070406,10.5514399 L32.3449935,10.5514399 C24.3879686,10.5726821 19.5978562,15.1617316 19.5978562,22.8465213 C19.5978562,30.4480741 24.3729842,35.362487 32.0766598,35.3930361 L52.4299684,35.3624869 C55.3860894,35.393036 57.9195073,37.9198738 57.9195073,40.9621039 C57.9195073,44.004334 55.6129662,45.7638734 52.7124594,45.9100592 L32.6681774,45.9330354 C18.3879953,45.9330354 8.9491098,36.576399 8.7334828,23.3104042 L8.72971837,22.8465213 Z" id="Combined-Shape-Copy-6"></path>
+                        <path d="M0,40.6098026 C0,27.0715655 9.47682974,18.0240726 24.0873447,17.7632812 L77.2326908,17.7632812 C74.062783,24.7001173 71.5109936,28.217264 69.5773223,28.3147211 L23.6152752,28.3147211 C15.6582502,28.3359633 10.8681379,32.9250128 10.8681379,40.6098026 C10.8681379,48.2113553 15.6432658,53.1257682 23.3469414,53.1563173 L43.7002501,53.1257681 C46.656371,53.1563172 49.1897889,55.683155 49.1897889,58.7253851 C49.1897889,61.7676152 46.8832479,63.5271547 43.982741,63.6733404 L23.938459,63.6963167 C9.65827698,63.6963167 0.219391433,54.3396802 0.0037644345,41.0736854 L0,40.6098026 Z" id="Combined-Shape-Copy-5" transform="translate(38.616345, 40.729799) rotate(180.000000) translate(-38.616345, -40.729799) "></path>
+                    </g>
+                </g>
+                <g id="Group-2-Copy" transform="translate(38.616345, 40.729799) rotate(180.000000) translate(-38.616345, -40.729799) translate(0.000000, 17.763281)"></g>
+            </g>
+        </g>
+    </g>
+</svg>

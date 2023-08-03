@@ -1,0 +1,21 @@
+{
+  "name": "The Backseat Driver Pass",
+  "symbol": "BMR",
+  "description": "You’re a Backseat Driver. Get ready to wreak havoc on the race in 2022.",
+  "seller_fee_basis_points": 100,
+  "image": "0.png",
+  "attributes": [
+    { "trait_type": "Year", "value": "2022" },
+    { "trait_type": "Ticket Type", "value": "Backseat Driver" }
+  ],
+  "properties": {
+    "creators": [
+      {
+        "address": "HK2TbkRvLJxU9uJP4MVTLp29Sm151xpcfkKMvhDQfZBW",
+        "share": 100
+      }
+    ],
+    "files": [{ "uri": "0.png", "type": "image/png" }]
+  },
+  "collection": null
+}

@@ -1,0 +1,21 @@
+{
+  "name": "The Bear Market Rally Ticket",
+  "symbol": "BMR",
+  "description": "You’re racing in the 2022 Bear Market Rally in Lisbon. Get excited, because we are.",
+  "seller_fee_basis_points": 100,
+  "image": "0.png",
+  "attributes": [
+    { "trait_type": "Year", "value": "2022" },
+    { "trait_type": "Ticket Type", "value": "Racer" }
+  ],
+  "properties": {
+    "creators": [
+      {
+        "address": "HK2TbkRvLJxU9uJP4MVTLp29Sm151xpcfkKMvhDQfZBW",
+        "share": 100
+      }
+    ],
+    "files": [{ "uri": "0.png", "type": "image/png" }]
+  },
+  "collection": null
+}

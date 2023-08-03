@@ -1,0 +1,21 @@
+/* Arkitekt */
+
+@font-face {
+  font-family: 'Arkitekt';
+  src: url('/fonts/arkitekt/Arkitekt-Regular.otf') format('otf'),
+    url('/fonts/arkitekt/Arkitekt-RegularIt.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arkitekt';
+  src: url('/fonts/arkitekt/Arkitekt-Medium.otf') format('otf'),
+    url('/fonts/arkitekt/Arkitekt-MediumIt.otf') format('otf');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
