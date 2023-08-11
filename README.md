@@ -1,124 +1,71 @@
-<div align="center">
-  <h1>🔋 ts-nextjs-tailwind-starter</h1>
-  <p>Next.js + Tailwind CSS + TypeScript starter packed with useful development features.</p>
-  <p>Made by <a href="https://theodorusclarence.com">Theodorus Clarence</a></p>
-  
-  
-  [![CodeFactor](https://www.codefactor.io/repository/github/theodorusclarence/ts-nextjs-tailwind-starter/badge/main)](https://www.codefactor.io/repository/github/theodorusclarence/ts-nextjs-tailwind-starter/overview/main)
-  [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=theodorusclarence_ts-nextjs-tailwind-starter&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=theodorusclarence_ts-nextjs-tailwind-starter)
-  [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=theodorusclarence_ts-nextjs-tailwind-starter&metric=bugs)](https://sonarcloud.io/dashboard?id=theodorusclarence_ts-nextjs-tailwind-starter)
-  [![GitHub Repo stars](https://img.shields.io/github/stars/theodorusclarence/ts-nextjs-tailwind-starter)](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/stargazers)
-  
-  [![Depfu](https://badges.depfu.com/badges/fc6e730632ab9dacaf7df478a08684a7/overview.svg)](https://depfu.com/github/theodorusclarence/ts-nextjs-tailwind-starter?project_id=30160)
-  [![Last Update](https://img.shields.io/badge/deps%20update-every%20sunday-blue.svg)](https://shields.io/)
-</div>
+# BMR Repo
 
-## Features
+This repo contains tools to build interactive, gamified livestream experiences with NFTs on the Solana blockchain. With the SDKs in this repo, you’re able to: 
 
-This repository is 🔋 battery packed with:
+1. Mint tickets with standard Metaplex tooling
+2. Directly airdrop NFTs to livestream viewers
+3. Poll NFT holders that are watching a livestream
+4. Issue referral codes to NFT purchasers to reward them.
 
-- ⚡️ Next.js 12
-- ⚛️ React 18
-- ✨ TypeScript
-- 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
-- 💎 Pre-built Components — Components that will **automatically adapt** with your brand color, [check here for the demo](https://tsnext-tw.thcl.dev/components)
-- 🃏 Jest — Configured for unit testing
-- 📈 Absolute Import and Path Alias — Import components using `@/` prefix
-- 📏 ESLint — Find and fix problems in your code, also will **auto sort** your imports
-- 💖 Prettier — Format your code consistently
-- 🐶 Husky & Lint Staged — Run scripts on your staged files before they are committed
-- 🤖 Conventional Commit Lint — Make sure you & your teammates follow conventional commit
-- ⏰ Release Please — Generate your changelog by activating the `release-please` workflow
-- 👷 Github Actions — Lint your code on PR
-- 🚘 Automatic Branch and Issue Autolink — Branch will be automatically created on issue **assign**, and auto linked on PR
-- 🔥 Snippets — A collection of useful snippets
-- 👀 Default Open Graph — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
-- 🗺 Site Map — Automatically generate sitemap.xml
-- 📦 Expansion Pack — Easily install common libraries, additional components, and configs
+## Architecture
 
-See the 👉 [feature details and changelog](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/blob/main/CHANGELOG.md) 👈 for more.
+The project is using a Next.js frontend with helper backends for referrals, minting, and polls.
 
-You can also check all of the **details and demos** on my blog post:
+- Homepage with Candy Machine Mints and [Twitch.tv](http://Twitch.tv) Component: [https://github.com/nation-io/BMR/blob/main/src/pages/index.tsx](https://github.com/nation-io/BMR/blob/main/src/pages/index.tsx)
+- SDK for live polling + airdropping of NFTs: [https://github.com/nation-io/BMR/tree/main/libs/live](https://github.com/nation-io/BMR/tree/main/libs/live)
+- Firebase API to track referrals: [https://github.com/nation-io/BMR/blob/main/src/utils/firebase.ts](https://github.com/nation-io/BMR/blob/main/src/utils/firebase.ts)
 
-- [One-stop Starter to Maximize Efficiency on Next.js & Tailwind CSS Projects](https://theodorusclarence.com/blog/one-stop-starter)
+## Get started
 
-## Getting Started
+First, you must clone the repo by running `git clone [git@github.com](mailto:git@github.com):nation-io/BMR.git` in your terminal.
 
-### 1. Clone this template using one of the three ways:
+Use `yarn dev` to start the development server, `yarn build` to generate static pages, and/or `yarn start` to start a production server.
 
-1. Use this repository as template
+You can also lint project-wide using `yarn lint` and/or prettify/format project-wide using `yarn format` too.
 
-   **Disclosure:** by using this repository as a template, there will be an attribution on your repository.
+### Candy Machines
 
-   I'll appreciate if you do, so this template can be known by others too 😄
-
-   ![Use as template](https://user-images.githubusercontent.com/55318172/129183039-1a61e68d-dd90-4548-9489-7b3ccbb35810.png)
-
-2. Using `create-next-app`
-
-   ```bash
-   npx create-next-app -e https://github.com/theodorusclarence/ts-nextjs-tailwind-starter project-name
-   ```
-
-3. Using `degit`
-
-   ```bash
-   npx degit theodorusclarence/ts-nextjs-tailwind-starter YOUR_APP_NAME
-   ```
-
-4. Deploy to Vercel
-
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter)
-
-### 2. Install dependencies
-
-It is encouraged to use **yarn** so the husky hooks can work properly.
+You will set up two Candy Machine V2 instances - one for tickets and another for companion passes. See the [Metaplex documentation](https://docs.metaplex.com/deprecated/candy-machine-js-cli/getting-started) on doing so. You must then add those Candy Machine ID’s to the `.env` file like so:
 
 ```bash
-yarn install
+NEXT_PUBLIC_CM_TICKET="BZCyb2zejK2k3hgYA2VFCpTfeFNSvSJdQ18otaub93U4"
+NEXT_PUBLIC_CM_COMPANION_PASS="6UTxtc2MP6uhauWGLp3KDCAcm3gXjawbXtKVjNPuHrJQ"
 ```
 
-### 3. Run the development server
+### Firebase
 
-You can start the server using this command:
+You will additionally configure the `.env` file with your own corresponding values:
 
 ```bash
-yarn dev
+NEXT_PUBLIC_FIREBASE_API_KEY=""
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=""
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=""
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=""
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=""
+NEXT_PUBLIC_FIREBASE_APP_ID=""
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=""
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/pages/index.tsx`.
+### Airdrops + Voting
 
-### 4. Change defaults
+These two features have been configured to use Supabase and require `.env` to contain - see [Supabase documentation](https://supabase.com/docs/guides/cli/local-development#start-supabase-services) on setting up a local environment:
 
-There are some things you need to change including title, urls, favicons, etc.
+```bash
+NEXT_SUPABASE_ENDPOINT="http://localhost:54321"
+NEXT_SUPABASE_SVC_TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"
+```
 
-Find all comments with !STARTERCONF, then follow the guide.
+`NEXT_SUPABASE_ENDPOINT` refers to your Supabase API url.
 
-Don't forget to change the package name in package.json
+`NEXT_SUPABASE_SVC_TOKEN` refers to your `service_role` key.
 
-### 5. Commit Message Convention
+Viewers upon first connecting to the stream will be airdropped an NFT thus requiring `.env` to contain the following:
 
-This starter is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), it is mandatory to use it to commit changes.
+```bash
+NEXT_STREAM_VIEWER_NFT_TREASURY="[250,222,205,42,61,212,112,183,225,114,117,234,31,84,201,110,66,155,162,230,11,167,133,16,134,174,195,241,145,226,208,83,59,50,51,133,245,17,15,69,247,217,46,222,184,155,76,28,88,35,58,178,55,36,142,128,227,250,65,20,16,90,21,199]"
+NEXT_STREAM_VIEWER_NFT_TREASURY_HASH_LIST='["Gs3HXkWKQ2nNPyjQJWMRUmgoJxbrS1YoKqMY2qgRjiJ"]'
+```
 
-## Projects using ts-nextjs-tailwind-starter
+`NEXT_STREAM_VIEWER_NFT_TREASURY` is the byte-array representation of the authority possessing the NFT mints declared in `NEXT_STREAM_VIEWER_NFT_TREASURY_HASH_LIST`.
 
-<!--
-TEMPLATE
-- [sitename](https://sitelink.com) ([Source](https://github.com/githublink))
-- [sitename](https://sitelink.com)
--->
-
-- [theodorusclarence.com](https://theodorusclarence.com) ([Source](https://github.com/theodorusclarence/theodorusclarence.com))
-- [Notiolink](https://notiolink.thcl.dev/) ([Source](https://github.com/theodorusclarence/notiolink))
-
-Are you using this starter? Please add your page (and repo) to the end of the list via a [Pull Request](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/edit/main/README.md). 😃
-
-## Expansion Pack 📦
-
-This starter is now equipped with an [expansion pack](https://github.com/theodorusclarence/expansion-pack).
-
-You can easily add expansion such as React Hook Form + Components, Storybook, and more just using a single command line.
-
-https://user-images.githubusercontent.com/55318172/146631994-e1cac137-1664-4cfe-950b-a96decc1eaa6.mp4
-
-Check out the [expansion pack repository](https://github.com/theodorusclarence/expansion-pack) for the commands
+Voting will require no additional `.env` variables however to configure a voting poll is done manually in Supabase Studio. Beginning with opening the `voting_polls` table, you will add a new row with a `name` and `description`. Then you will open the `voting_polls_choices` table to add the the corresponding choices to the previously created poll.
